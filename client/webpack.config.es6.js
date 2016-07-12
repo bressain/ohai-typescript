@@ -7,16 +7,27 @@ import postcssReporter from 'postcss-reporter'
 import postcssUrl from 'postcss-url'
 import webpack from 'webpack'
 
+function isProd() {
+  return process.env.NODE_ENV === 'production'
+}
+
+function getDependencies() {
+  console.log("isProd()", isProd())
+  const dependencies = [
+    'babel-polyfill',
+    'react',
+    'react-dom',
+    'react-styleable'
+  ]
+  return isProd()
+    ? dependencies
+    : dependencies.concat(['webpack-dev-server/client?http://localhost:3000'])
+}
+
 export default {
   devtool: 'source-map',
   entry: {
-    vendor: [
-      'webpack-dev-server/client?http://localhost:3000',
-      'babel-polyfill',
-      'react',
-      'react-dom',
-      'react-styleable'
-    ],
+    vendor: getDependencies(),
     app: './lib/index.js'
   },
   output: {

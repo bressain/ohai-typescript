@@ -12,7 +12,6 @@ function isProd() {
 }
 
 function getDependencies() {
-  console.log("isProd()", isProd())
   const dependencies = [
     'babel-polyfill',
     'react',

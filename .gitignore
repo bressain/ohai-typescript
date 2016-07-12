@@ -4,3 +4,4 @@ typings
 build
 dist
 *.log
+public

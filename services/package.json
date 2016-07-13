@@ -10,7 +10,8 @@
     "start:api:dev": "rm -rf ./build/api && gulp watch-api",
     "start:static": "node ./build/static",
     "start:static:dev": "rm -rf ./build/static && gulp watch-static",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "adhoc:do-the-things": "tsc -p tsconfig.json && node ./build/adhoc/do-the-things.js"
   },
   "keywords": [],
   "author": "",

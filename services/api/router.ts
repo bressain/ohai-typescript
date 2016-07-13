@@ -1,6 +1,6 @@
 import * as express from 'express'
 
-import * as repository from './repository'
+import * as repository from '../common/inf/potabos-repo'
 
 const router = express.Router()
 

@@ -18,7 +18,7 @@ gulp.task('start-api', ['build'], () => {
 })
 
 gulp.task('watch-api', ['start-api'], () => {
-  gulp.watch('api/lib', ['build'])
+  gulp.watch('api', ['build'])
 })
 
 gulp.task('start-static', ['build'], () => {
@@ -30,5 +30,5 @@ gulp.task('start-static', ['build'], () => {
 })
 
 gulp.task('watch-static', ['start-static'], () => {
-  gulp.watch('static/lib', ['build'])
+  gulp.watch('static', ['build'])
 })

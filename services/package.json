@@ -8,8 +8,8 @@
     "typings": "typings install",
     "start:api": "node ./build/api",
     "start:api:dev": "rm -rf ./build/api && gulp watch-api",
-    "start:app": "node ./build/app",
-    "start:app:dev": "rm -rf ./build/app && gulp watch-app",
+    "start:static": "node ./build/static",
+    "start:static:dev": "rm -rf ./build/static && gulp watch-static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

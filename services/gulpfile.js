@@ -21,14 +21,14 @@ gulp.task('watch-api', ['start-api'], () => {
   gulp.watch('api/lib', ['build'])
 })
 
-gulp.task('start-app', ['build'], () => {
+gulp.task('start-static', ['build'], () => {
   var options = {
     watch: ['build/'],
-    script: 'build/app/index.js'
+    script: 'build/static/index.js'
   }
   nodemon(options)
 })
 
-gulp.task('watch-app', ['start-app'], () => {
-  gulp.watch('app/lib', ['build'])
+gulp.task('watch-static', ['start-static'], () => {
+  gulp.watch('static/lib', ['build'])
 })

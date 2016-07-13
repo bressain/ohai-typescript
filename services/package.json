@@ -1,13 +1,15 @@
 {
-  "name": "app",
+  "name": "services",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./build && tsc -p tsconfig.json",
     "typings": "typings install",
-    "start": "node build",
-    "start:dev": "rm -rf ./build && gulp watch",
+    "start:api": "node ./build/api",
+    "start:api:dev": "rm -rf ./build/api && gulp watch-api",
+    "start:app": "node ./build/app",
+    "start:app:dev": "rm -rf ./build/app && gulp watch-app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

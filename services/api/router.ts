@@ -17,6 +17,7 @@ router.get('/potabos', async (req: express.Request, res: express.Response) => {
 router.post('/potabos', (req: express.Request, res: express.Response) => {
   if (!(req.body instanceof Array)) {
     res.status(400).send('thems not potabos!')
+    return
   }
 
   addPotabosCommand(req.body)

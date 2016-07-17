@@ -4,28 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./build && tsc -p tsconfig.json",
-    "typings": "typings install",
-    "start:api": "node ./build/api",
-    "start:api:dev": "rm -rf ./build/api && gulp watch-api",
-    "start:static": "node ./build/static",
-    "start:static:dev": "rm -rf ./build/static && gulp watch-static",
+    "start:api": "node -r babel-register ./api",
+    "start:api:dev": "nodemon -r babel-register ./api",
+    "start:static": "node -r babel-register ./static",
+    "start:static:dev": "nodemon -r babel-register ./static",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "adhoc:do-the-things": "tsc -p tsconfig.json && node ./build/adhoc/do-the-things.js"
+    "adhoc:do-the-things": "node -r babel-register ./adhoc/do-the-things.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "pug": "^2.0.0-beta3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6",
-    "nodemon": "^1.9.2",
-    "typescript": "^1.8.10",
-    "typings": "^1.3.1"
+    "nodemon": "^1.9.2"
   }
 }

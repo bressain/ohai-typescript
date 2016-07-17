@@ -1,5 +1,5 @@
-import * as express from 'express'
-import * as path from 'path'
+const express = require('express')
+const path = require('path')
 
 const app = express()
 
@@ -8,8 +8,8 @@ app.set('view engine', 'pug')
 
 app.use('/assets', express.static(path.join('static', 'public')))
 
-app.get('/', (req: express.Request, res: express.Response) => {
+app.get('/', (req, res) => {
   res.render('index')
 })
 
-export default app
+module.exports = app

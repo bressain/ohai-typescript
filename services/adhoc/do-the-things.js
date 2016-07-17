@@ -1,4 +1,4 @@
-import * as repository from '../common/inf/potabos-repo'
+const repository = require('../common/inf/potabos-repo')
 
 console.log('preparing to process all the potabos...')
 
